@@ -35,7 +35,7 @@ if(!isset($_SESSION['admin_id']))
           </ul>
         </li>
         
-        <li><a href="http://localhost/SE_Project/index.php">Voter Panel</a></li>
+        <li><a href="http://localhost/online-voting-system/index.php">Voter Panel</a></li>
         <li><a href="logout.php">Logout</a></li>
 
       </ul>

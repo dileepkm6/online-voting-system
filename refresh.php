@@ -46,7 +46,7 @@ or die("There are no records to display ... \n" . mysqli_error());
           </ul>
         </li>
         
-        <li><a href="http://localhost/SE_Project/index.php">Voter Panel</a></li>
+        <li><a href="http://localhost/online-voting-system/index.php">Voter Panel</a></li>
         <li><a href="logout.php">Logout</a></li>
 
       </ul>

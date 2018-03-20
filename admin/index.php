@@ -56,7 +56,7 @@
 
       </div>
       <br><br>
-    <center>Return to <a href="http://localhost/SE_Project/index.php">Voter Panel</a></center>
+    <center>Return to <a href="http://localhost/online-voting-system/index.php">Voter Panel</a></center>
 
     </form>
   </div>
