@@ -12,26 +12,36 @@ $positions_retrieved=$mysqli->query("select * from positions")
 or die("there is no position to display \n".mysqli_error());
 ?>
 <?php
-if(isset($_GET['position']))
-{
-  $p=$_GET['position'];
-  $avlCandidate=$mysqli->query("select * from candidate where Position='$p'") or
-  die("there is no candidate to display\n".mysqli_error());
-  header("location:candidate.php");
-}
-?>
-<?php
 if(isset($_POST['Submit']))
 {
   $election_id   = addslashes($_POST['election_id']);
   $election_desc = addslashes( $_POST['election_desc'] );
   $end_date      = addslashes($_POST['end_date']);
   $position      = addslashes( $_POST['position'] );
+  $avlCandidate=$mysqli->query("select * from candidate where Position='$position'");
+  $avlElection=$mysqli->query("select * from election where Position='$position'");
+  $count=mysqli_num_rows($avlCandidate);
+  $count1=mysqli_num_rows($avlElection);
+
+  if($count==0){
+  echo '<script type="text/javascript">'; 
+  echo 'alert("there is no candidate for selected position.\nSelect another positions or add candidate..");'; 
+  echo 'window.location.href = "create_election.php";';
+  echo '</script>';
+}
+if($count1 > 0){
+  echo '<script type="text/javascript">'; 
+  echo 'alert("already election are created for this position.\nSelect another position..");'; 
+  echo 'window.location.href = "create_election.php";';
+  echo '</script>';
+}
+else{
   $sql = $mysqli->query( "INSERT INTO election(Election_id,Election_Desc,End_Date,Position) VALUES ('$election_id','$election_desc','$end_date','$position')" )
-            or die("Could not insert candidate at the moment". mysqli_error() );
+            or die("Could not create election at the moment");
 
     // redirect back to candidates
      header("Location: create_election.php");
+}
 }
 ?>
 <!DOCTYPE html>

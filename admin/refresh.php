@@ -100,12 +100,16 @@ or die("There are no records to display ... \n" . mysqli_error());
 
 <?php
     //loop through all table rows
+$p='';
     while ($row= mysqli_fetch_array($results)){
+      $p=$row;
     echo "<tr>";
     echo "<td>" . $row['Candidate_id']."</td>";
     echo "<td>" . $row['Username']."</td>";
     echo "<td>" . $row['Candidate_cvote']."</td>";
+    echo "</tr>";
     }
+    echo '<a href="reset_election.php?position=' . $p['Position'] . '"><button>Reset</button></a>';
     mysqli_free_result($results);
     mysqli_close($mysqli);
 ?>
