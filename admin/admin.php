@@ -80,5 +80,21 @@ if(!isset($_SESSION['admin_id']))
 <!-- IE9 Placeholder Support -->
 <script src="layout/scripts/jquery.placeholder.min.js"></script>
 <!-- / IE9 Placeholder Support -->
+
+<div class="wrapper row6">
+  <div> 
+    <p>Dileep Kr Maurya</p>
+    <p>NITK Surathkal</p>
+    <p>Email:<a href="https://gmail.com">dileepkm6@gmail.com</a></p>
+  </div>
+</div>
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<!-- IE9 Placeholder Support -->
+<script src="layout/scripts/jquery.placeholder.min.js"></script>
+<!-- / IE9 Placeholder Support -->
 </body>
 </html>
