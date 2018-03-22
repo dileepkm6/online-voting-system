@@ -21,7 +21,7 @@
   
 </head>
 
-<body style="background-image:url('images/demo/backgrounds/b8.jpeg');">
+<body style="background-image:url('images/demo/backgrounds/b4.jpeg');">
 
 
   
@@ -31,28 +31,23 @@
 </div>
 
 <div class="container" >
-  <div class="card"></div>
-
   <div class="card">
-    <h1 class="title">Login</h1>
     <form name="form1" action="login_validation.php" method="post" >
 
       <div class="input-container">
-        <input name="Admin_id" type="text" required="required"/>
-        <label>Admin_Id</label>
+        <input name="Admin_id" type="text" placeholder="admin_Id" required="required"/>
+        
         <div class="bar"></div>
       </div>
       <div class="input-container">
-        <input name="Password" type="password"  required="required"/>
-        <label>Password</label>
+        <input name="Password" type="password"  placeholder="password" required="required"/>
+        
         <div class="bar"></div>
       </div>
 
-      <center><tr><td colspan="2" align="center"><input type="checkbox" name="remember" value="1"> <font color="blue">Remember Me</font></td></tr></center><br>
-
       <div class="button-container">
 
-        <input  type="submit" name="Submit">
+        <input  type="submit" name="Submit" value="Login">
 
       </div>
       <br><br>
